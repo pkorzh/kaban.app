@@ -27,6 +27,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
+  // Load a Node.js module directly (here it's a Sass file)
+    '@/assets/scss/main.scss'
   ],
 
   /*
