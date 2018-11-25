@@ -1,10 +1,184 @@
 .section {
-  
-  
-  &.section-about {
-    
+  padding-bottom: 90px;
+  @media (max-width: $breakpoint-small) {
+    padding-bottom: 74px;
   }
+
+  &-subtitle {
+    display: block;
+    font-family: $global-font-family-secondary;
+    font-size: 23px;
+    font-weight: 400;
+    text-transform: lowercase;
+    color: $blue;
+    margin-bottom: 32px;
+    @media (max-width: $breakpoint-small) {
+      margin-bottom: 5px;
+    }
+  }
+  &-area {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding: 24px;
+    box-sizing: border-box;
+    @media (max-width: $breakpoint-small) {
+      padding: 40px 0 0;
+    }
+    &:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      content: '';
+      background: url('../images/boke.svg') no-repeat 50% 0;
+      background-size: 100% auto;
+      z-index: -1;
+    }
+  }
+  &-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    &-check {
+      text-align: left;
+      li {
+        position: relative;
+        padding: 0 0 10px 55px;
+        &::before {
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          left: 0;
+          top: 5px;
+          content:'';
+          background: url('../images/check.svg') no-repeat;
+          background-size: cover;
+        }
+        @media (max-width: $breakpoint-small) {
+          padding-left: 40px;
+          &::before {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+    strong {
+      text-transform: uppercase;
+      display: block;
+      font-size: 23px;
+      font-weight: bold;
+      font-family: $global-font-family-secondary;
+    }
+  }
+  
+  &.section-hero {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: $breakpoint-small) {
+        flex-direction: column;
+      }
+    }
+    .content {
+      width: 35%;
+      font-size: 26px;
+      line-height: 1.462;
+      @media (max-width: $breakpoint-small) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .media {
+      width: 60%;
+      @media (max-width: $breakpoint-small) {
+        display: none;
+      }
+      &-people {
+        margin: 0 auto;
+        width: 60%;
+      }
+    }
+    h1 {
+      span {
+        padding: 3px 10px;
+        margin: 12px 0 0 -34px;
+        vertical-align: top;
+        display: inline-block;
+        font-size: 13px;
+        color: #fff;
+        border-radius: 11px;
+        background: #1bcf90;
+      }
+    }
+  }
+
+  &.section-about {
+    .container {
+      display: flex;
+      align-items: center;
+      @media (max-width: $breakpoint-small) {
+        flex-direction: column;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    }
+    .content {
+      width: 44%;
+      padding-right: 32px;
+      @media (max-width: $breakpoint-small) {
+        width: 100%;
+        padding: 0;
+      }
+    }
+    .video {
+      width: 56%;
+      height: 412px;
+      @media (max-width: $breakpoint-small) {
+        order:-1;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 30px;
+      }
+    }
+    .section-subtitle {
+      color: $cyan;
+    }
+  }
+
   &.section-subscribe {
-    
+    .section-area {
+      @media (min-width: $breakpoint-large) {
+        padding-left: 150px;
+        padding-right: 150px;
+      }
+    }
+  }
+
+  &.section-features {
+    padding: 110px 0;
+    margin-bottom: 90px;
+    color: $superligth-blue;
+    background: linear-gradient(135deg, $cyan 0%, $cyan 22%, $blue 22%, $blue 54%, $brand-color 54%, $brand-color 100%);
+    @media (max-width: $breakpoint-small) {
+      padding: 74px 0;
+      margin-bottom: 74px;
+    }
+    .section-subtitle {
+      color: $cyan;
+    }
+  }
+
+  &.section-roadmap {
+    .section-area {
+      &::before {
+        transform: scale(-1,1);
+      }
+    }
   }
 }

@@ -1,8 +1,62 @@
-.form-send {
-  input[type='text'] {
+.form {
+  background: #f5f6fa;
+  border-radius: 5px;
+  padding: 8px 11px;
+  text-align: left;
+  @media (max-width: $breakpoint-small) {
+    padding: 10px;
+  }
+  input[type='text'],
+  input[type='email'],
+  input[type='password'] {
+    box-sizing: border-box;
     border: 0;
     width: 100%;
-    height: 35px;
-    padding: 5px 25px 5px 10px;
+    height: 56px;
+    padding: 5px;
+    color: #5c6887;
+    font-size: 22px;
+    font-style: italic;
+    font-family: $global-font-family;
+    background: none;
+  }
+  input[type='submit'] {
+    height: 56px;
+    border-radius: 5px;
+    padding: 0 32px;
+    margin: 0;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: $brand-color;
+    cursor: pointer;
+    &:hover {
+      background: $blue;
+    }
+  }
+  &-holder {
+   display: flex;
+    @media (max-width: $breakpoint-small) {
+      flex-direction: column;
+    }
+  }
+  &-area {
+    position: relative;
+    flex: 1 1 auto;
+    &-mail {
+      padding-left: 53px;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        content: '';
+        transform: translateY(-50%);
+        width: 32px;
+        height: 24px;
+        background: url('../images/email.svg') no-repeat;
+        background-size: 32px 24px;
+      }
+    }
   }
 }
