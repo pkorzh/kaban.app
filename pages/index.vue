@@ -1,16 +1,19 @@
 <template>
   <div id="wrapper">
-    <header class="header">
-        <a href="#" class="logo"></a>
-        <nav>
+    <header class="header" :class="{'nav-open': this.displayMenu === true}">
+        <a href="#" class="header-logo"><img src="../assets/images/logo_header.svg" alt="logo"/></a>
+        <nav class="header-nav">
+            <a class="header-close" href="#" @click="toggleMenu">
+              <font-awesome-icon icon="times" />
+              close
+            </a>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Subscribe</a></li>
-                <li><a href="#">How it Works</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">roadmap</a></li>
+                <li v-for="item in navList">
+                  <a :href="item.link">{{ item.title }}</a>
+                </li>
             </ul>
         </nav>
+        <a class="header-menu" href="#" @click="toggleMenu"><font-awesome-icon icon="bars" /></a>
     </header>
     <section class="section">
         <div class="container container-expand">
@@ -52,22 +55,21 @@
     </section>
     <footer class="footer">
         <div class="container">
-            <div class="footer-panel">
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Subscribe</a></li>
-                    <li><a href="#">How it Works</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">roadmap</a></li>
+            <div class="footer-area">
+                <a href="#" class="footer-logo"><img src="../assets/images/logo_footer.svg" alt="logo"/></a>
+                <ul class="footer-nav">
+                  <li v-for="item in navList">
+                    <a :href="item.link">{{ item.title }}</a>
+                  </li>
                 </ul>
             </div>
-            <div class="footer-area">
+            <div class="footer-area footer-area-bottom">
                 <p>© Kaban Inc. All rights reserved.</p>
-                <ul class="social-links">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                <ul class="footer-social">
+                    <li><a href="#" class="facebook"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a></li>
+                    <li><a href="#" class="google"><font-awesome-icon :icon="['fab', 'google-plus-g']" /></a></li>
+                    <li><a href="#" class="linkedin"><font-awesome-icon :icon="['fab', 'linkedin-in']" /></a></li>
+                    <li><a href="#" class="twitter"><font-awesome-icon :icon="['fab', 'twitter']" /></a></li>
                 </ul>
             </div>
         </div>
@@ -77,5 +79,39 @@
 
 <script>
   export default {
+    name: 'landing',
+    components: {},
+    data () {
+      return {
+        displayMenu: false,
+        navList: [
+          {
+            link: '#',
+            title: 'About'
+          },
+          {
+            link: '#',
+            title: 'Subscribe'
+          },
+          {
+            link: '#',
+            title: 'How it Works'
+          },
+          {
+            link: '#',
+            title: 'Features'
+          },
+          {
+            link: '#',
+            title: 'roadmap'
+          }
+        ]
+      }
+    },
+    methods: {
+      toggleMenu () {
+        this.displayMenu = !this.displayMenu
+      },
+    }
   }
 </script>

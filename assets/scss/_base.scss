@@ -78,9 +78,22 @@ h5, .h5 {}
 
 h6, .h6 {}
 
+#wrapper {
+  position: relative;
+  overflow: hidden;
+  background: url('../images/bg.svg') 100% 0 no-repeat;
+  background-size: 80%;
+  @media (max-width: $breakpoint-medium) {
+    background-size: 165px;
+  }
+  @media (max-width: $breakpoint-small) {
+    background-size: 120px;
+  }
+}
+
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
