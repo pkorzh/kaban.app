@@ -9,7 +9,7 @@
 				</a>
 				<ul>
 					<li v-for="item in navList">
-						<a :href="item.link">{{ item.title }}</a>
+						<a :href="item.link" :target="item.target">{{ item.title }}</a>
 					</li>
 				</ul>
 			</nav>
@@ -151,7 +151,17 @@
 					{
 						link: '#',
 						title: 'roadmap'
-					}
+					},
+					{
+						link: 'https://docs.kaban.app',
+						target: '_blank',
+						title: 'Docs'
+					},
+					{
+						link: 'https://github.com/pkorzh/kaban',
+						target: '_blank',
+						title: 'GitHub'
+					},
 				]
 			}
 		},
