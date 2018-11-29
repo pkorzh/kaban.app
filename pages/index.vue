@@ -106,12 +106,12 @@
 					<a href="#" class="footer-logo"><img src="../assets/images/logo_footer.svg" alt="logo"/></a>
 					<ul class="footer-nav">
 						<li v-for="item in navList">
-							<a :href="item.link">{{ item.title }}</a>
+							<a :href="item.link" :target="item.target">{{ item.title }}</a>
 						</li>
 					</ul>
 				</div>
 				<div class="footer-area footer-area-bottom">
-					<p>© Kaban Inc. All rights reserved.</p>
+					<p>© Kaban App</p>
 					<ul class="footer-social">
 						<li><a href="#" class="facebook"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a></li>
 						<li><a href="#" class="google"><font-awesome-icon :icon="['fab', 'google-plus-g']" /></a></li>
