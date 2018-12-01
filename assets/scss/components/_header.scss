@@ -2,11 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px;
   position: relative;
   z-index: 10;
+  padding: 100px 15px;
+  @media (min-width: 1650px) {
+    padding: 100px;
+  }
   @media (max-width: $breakpoint-xlarge) {
-    padding: 60px 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   @media (max-width: $breakpoint-medium) {
     padding-top: 40px;
@@ -45,6 +49,7 @@
       margin: 0;
       list-style: none;
       display: flex;
+      align-items: center;
       @media (max-width: $breakpoint-medium) {
         display: block;
         position: relative;

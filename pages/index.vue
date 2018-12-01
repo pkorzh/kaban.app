@@ -41,7 +41,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="section section-about">
+		<section class="section section-about" id="about">
 			<div class="container">
 				<div class="content">
 					<h2>About Kaban</h2>
@@ -53,7 +53,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="section section-subscribe">
+		<section class="section section-subscribe" id="subscribe">
 			<div class="container">
 				<div class="section-area">
 					<h2>Subscribe</h2>
@@ -72,12 +72,12 @@
 				</div>
 			</div>
 		</section>
-		<section class="section section-features">
+		<section class="section section-features" id="features">
 			<div class="container">
-					
+				
 			</div>
 		</section>
-		<section class="section section-roadmap">
+		<section class="section section-roadmap" id="roadmap">
 			<div class="container">
 				<div class="section-area">
 					<h2>What is New</h2>
@@ -133,11 +133,11 @@
 				displayMenu: false,
 				navList: [
 					{
-						link: '#',
+						link: '#about',
 						title: 'About'
 					},
 					{
-						link: '#',
+						link: '#subscribe',
 						title: 'Subscribe'
 					},
 					{
@@ -145,11 +145,11 @@
 						title: 'How it Works'
 					},
 					{
-						link: '#',
+						link: '#features',
 						title: 'Features'
 					},
 					{
-						link: '#',
+						link: '#roadmap',
 						title: 'roadmap'
 					},
 					{
