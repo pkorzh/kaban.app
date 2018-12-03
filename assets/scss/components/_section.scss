@@ -217,9 +217,44 @@
     @media (max-width: $breakpoint-small) {
       padding: 74px 0;
       margin-bottom: 74px;
+      background: linear-gradient(135deg, $blue 0%, $blue 54%, $brand-color 54%, $brand-color 100%);
     }
-    .section-subtitle {
-      color: $cyan;
+    .section {
+      &-subtitle {
+        color: $cyan;
+      }
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      @media (max-width: $breakpoint-small) {
+        flex-direction: column;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    }
+    .media {
+      flex: 1 1 auto;
+    }
+    .content {
+      flex-shrink: 0;
+      width: 40%;
+      padding-left: 30px;
+      @media (min-width: $breakpoint-xlarge) {
+        padding-left: 75px;
+      }
+      @media (max-width: $breakpoint-medium) {
+        width: 52%;
+      }
+      @media (max-width: $breakpoint-small) {
+        padding: 0;
+        width: 100%;
+        order: -1;
+      }
+    }
+    h2 {
+      color: #fff;
     }
   }
 

@@ -74,7 +74,12 @@
 		</section>
 		<section class="section section-features" id="features">
 			<div class="container">
-				
+				<div class="media">
+					<img src="../assets/images/page@2x.png" alt="image description"/>
+				</div>
+				<div class="content">
+					<Slider />
+				</div>
 			</div>
 		</section>
 		<section class="section section-roadmap" id="roadmap">
@@ -125,9 +130,13 @@
 </template>
 
 <script>
+	import Slider from '@/components/Slider';
+
 	export default {
 		name: 'landing',
-		components: {},
+		components: {
+			Slider
+		},
 		data () {
 			return {
 				displayMenu: false,
