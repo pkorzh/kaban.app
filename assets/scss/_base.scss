@@ -116,3 +116,19 @@ h6, .h6 {}
     max-width: 1500px;
   }
 }
+
+a.btn {
+    border-radius: 5px;
+    padding: 20px 32px;
+    margin: auto 0;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: $brand-color;
+    cursor: pointer;
+    -webkit-appearance: none;
+    &:hover {
+      background: $blue;
+    }
+}

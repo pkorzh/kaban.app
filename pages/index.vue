@@ -18,25 +18,18 @@
 		<section class="section section-hero">
 			<div class="container container-large">
 				<div class="content">
-					<h1>Kaban on premise AND cloud <span>soon</span></h1>
+					<h1>Open Source Issue Tracker</h1>
 					<div class="description">
-						<p>Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. </p>
+						<p>Kaban is minimalistic easy to use issue tracking app build for mid-size teams.</p>
 					</div>
-					<form action="#" class="form">
-						<fieldset>
-							<div class="form-holder">
-								<div class="form-area form-area-mail">
-									<input type="email" placeholder="Enter your email to know more">
-								</div>
-								<input type="submit" value="ENTER">
-							</div>
-						</fieldset>
-					</form>
+					<a href="https://docs.kaban.app/" class="btn" target="_blank">
+						Get Started
+					</a>
 				</div>
 				<div class="media">
-					<img src="../assets/images/page@2x.png" alt="image description"/>
+					<img src="../assets/images/boards@2x.png" alt="Kaban board"/>
 					<div class="media-people">
-						<img src="../assets/images/people.svg" alt="image description"/>
+						<img src="../assets/images/people.svg" alt="People"/>
 					</div>
 				</div>
 			</div>
@@ -75,7 +68,7 @@
 		<section class="section section-features" id="features">
 			<div class="container">
 				<div class="media">
-					<img src="../assets/images/page@2x.png" alt="image description"/>
+					<img src="../assets/images/backlogs@2x.png" alt="Kaban backlog"/>
 				</div>
 				<div class="content">
 					<Slider />
@@ -85,7 +78,7 @@
 		<section class="section section-roadmap" id="roadmap">
 			<div class="container">
 				<div class="section-area">
-					<h2>What is New</h2>
+					<h2>Roadmap</h2>
 					<strong class="section-subtitle">best in our product</strong>
 					<p>It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero.</p>
 					<ul class="section-list section-list-check">
@@ -148,10 +141,6 @@
 					{
 						link: '#subscribe',
 						title: 'Subscribe'
-					},
-					{
-						link: '#',
-						title: 'How it Works'
 					},
 					{
 						link: '#features',
