@@ -111,10 +111,21 @@
 				<div class="footer-area footer-area-bottom">
 					<p>© Kaban App</p>
 					<ul class="footer-social">
-						<li><a href="#" class="facebook"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a></li>
-						<li><a href="#" class="google"><font-awesome-icon :icon="['fab', 'google-plus-g']" /></a></li>
-						<li><a href="#" class="linkedin"><font-awesome-icon :icon="['fab', 'linkedin-in']" /></a></li>
-						<li><a href="#" class="twitter"><font-awesome-icon :icon="['fab', 'twitter']" /></a></li>
+						<li>
+							<a 
+								href="https://www.linkedin.com/in/platon-korzh-195b6231/" 
+								class="linkedin">
+								<font-awesome-icon :icon="['fab', 'linkedin-in']" />
+							</a>
+						</li>
+						
+						<li>
+							<a 
+								href="https://twitter.com/platonkorzh" 
+								class="twitter">
+								<font-awesome-icon :icon="['fab', 'twitter']" />
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
