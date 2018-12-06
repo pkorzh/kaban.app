@@ -79,20 +79,15 @@
 			<div class="container">
 				<div class="section-area">
 					<h2>Roadmap</h2>
-					<strong class="section-subtitle">best in our product</strong>
-					<p>It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero.</p>
+					<strong class="section-subtitle">so, what's the plan, Lebowski?</strong>
+					<p>
+						Our goal here is to maintain minimal, easy to use issue tracker with clean documentation and backlog forecast.
+					</p>
+
 					<ul class="section-list section-list-check">
-						<li>
-							<strong>Feature 1</strong>
-							Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over. content. 
-						</li>
-						<li>
-							<strong>Feature 2</strong>
-							Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over. content. 
-						</li>
-						<li>
-							<strong>Feature 3</strong>
-							Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over. content. 
+						<li v-for="(roadmap, index) in roadmaps" :key="index">
+							<strong>{{ roadmap.name }}</strong>
+							{{ roadmap.description }}
 						</li>
 					</ul>
 				</div>
@@ -109,7 +104,7 @@
 					</ul>
 				</div>
 				<div class="footer-area footer-area-bottom">
-					<p>© Kaban App</p>
+					<p>Kaban App</p>
 					<ul class="footer-social">
 						<li>
 							<a 
@@ -144,6 +139,16 @@
 		data () {
 			return {
 				displayMenu: false,
+				roadmaps: [
+					{
+						name: 'SaaS Offering',
+						description: '',
+					},
+					{
+						name: 'Integrations',
+						description: '',
+					},
+				],
 				navList: [
 					{
 						link: '#about',
